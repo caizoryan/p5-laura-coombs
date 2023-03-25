@@ -8,14 +8,51 @@
 
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
-
+  <style>
+    @font-face {
+      font-family: suisse;
+      src: url("./SuisseIntlLD-Medium.otf") format("opentype");
+    }
+    #p5 {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .main {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+    a {
+      all: unset;
+      font-family: "suisse", Arial;
+      font-size: 20px;
+      border: 2px solid black;
+      padding: 8px;
+      cursor: pointer;
+      transition: all 200ms ease-in;
+      background: black;
+      color: white;
+    }
+    a:hover {
+      background: white;
+      color: black;
+    }
+  </style>
   <body>
-    <script src="libraries/p5.js"></script>
-    <script src="libraries/p5.sound.min.js"></script>
-    <script src="easings.js"></script>
-    <script src="prop.js"></script>
-    <script src="timeline.js"></script>
-    <script src="animationKeys.js"></script>
-    <script src="sketch.js"></script>
+    <div id="p5"></div>
+    <div class="main"></div>
   </body>
+  <script src="libraries/p5.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+  <script src="easings.js"></script>
+  <script src="prop.js"></script>
+  <script src="timeline.js"></script>
+  <script src="animationKeys.js"></script>
+  <script src="sketch.js"></script>
 </html>
