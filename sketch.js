@@ -19,11 +19,13 @@ let trs = [];
 let shw = false;
 let fontBold, fontRegular;
 let itsTime = false;
+
 function preload() {
   fontBold = loadFont("./craigFonts/SuisseIntlLD-Bold.otf");
   fontRegular = loadFont("./craigFonts/SuisseIntlLD-Regular.otf");
   fontBook = loadFont("./craigFonts/SuisseIntlLD-Book.otf");
 }
+
 function setup() {
   createCanvas(windowWidth, windowHeight).parent("p5");
   setValues(width, height);
@@ -37,6 +39,8 @@ function setup() {
   setTimeout(() => {
     shw = true;
   }, 34 * t);
+
+  console.log("The time on the poster was wrong, thanks to Omama :D");
 }
 
 function draw() {
