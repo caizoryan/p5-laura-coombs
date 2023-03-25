@@ -1,3 +1,12 @@
+//
+//   /~\
+// C oo
+// _( ^)
+// /   ~\
+// Too anyone browsing this code, feel free to use it or tinker or edit it
+// if you need help or have questions, contact me
+// Github: https://github.com/caizoryan
+
 // Add link to the zoom meeting here and it should work
 const link = "https://www.youtube.com/watch?v=DLzxrzFCyOs";
 // The link button will only show when it is time for the meeting,
@@ -49,6 +58,21 @@ function draw() {
   textFont(fontRegular);
   for (const x of trs) x.update();
 }
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  setValues(width, height);
+  trs = [];
+  shw = false;
+  trs.push(
+    new TextTrail("LAURA", color(255, 200, 0), laura, 0),
+    new TextTrail("COOMBS", color(255, 200, 0), coombs, 0),
+    new TextTrail("MARCH", color(255), date, 8 * t * 2),
+    new TextTrail("28", color(255), date2, 8 * t * 2)
+  );
+  setTimeout(() => {
+    shw = true;
+  }, 34 * t);
+}
 
 class TextTrail {
   constructor(text, border, keyframes, delay) {
@@ -99,24 +123,14 @@ class TextTrail {
 }
 
 function timerInit() {
-  // Set the date we're counting down to
-
-  // if (countDownDate - new Date().getTime() < 0) showZoomLink();
-  // Update the count down every 1 second
-  var x = setInterval(function () {
-    // Get today's date and time
-    var now = new Date().getTime();
-
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
-
-    // Time calculations for days, hours, minutes and seconds
+  let x = setInterval(function () {
+    let now = new Date().getTime();
+    let distance = countDownDate - now;
 
     hours = Math.floor(distance / (1000 * 60 * 60));
     minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // If the count down is over, write some text
     if (distance < 0) {
       itsTime = true;
       clearInterval(x);
@@ -125,7 +139,7 @@ function timerInit() {
   }, 1000);
 }
 
-function showZoomLink(width, height) {
+function showZoomLink() {
   let x = window.innerWidth / 2 - 300;
   let y = window.innerHeight / 2 + 130;
   let zoomButton = `
@@ -146,3 +160,20 @@ function showZoomLink(width, height) {
     }
   }, 100);
 }
+
+// ....................................................
+// ....................................................
+// ........................./\.........................
+// ..................______/__\_______.................
+// ..................||-------------||.................
+// ..................||             ||.................
+// ..................||    \|||/    ||.................
+// ..................||   [ @-@ ]   ||.................
+// ..................||    ( ' )    ||.......       ...
+// ..................||    _(O)_    ||.......|EXIT |...
+// ..................||   / >=< \   ||.......|==>> |...
+// ..................||__/_|_:_|_\__||.................
+// ..................-----------------.................
+// ....................................................
+// ....................................................
+// Monkey with a bowtie in the museum

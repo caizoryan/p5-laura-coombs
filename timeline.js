@@ -1,3 +1,6 @@
+// animation library for p5 js, still working on it but you can find the updated stuff at
+// https://github.com/caizoryan/p5AnimationLibrary
+
 class Timeline {
   constructor() {
     this.props = [];
