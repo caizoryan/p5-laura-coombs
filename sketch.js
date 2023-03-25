@@ -11,9 +11,9 @@ let shw = false;
 let fontBold, fontRegular;
 let itsTime = false;
 function preload() {
-  fontBold = loadFont("./SuisseIntlLD-Bold.otf");
-  fontRegular = loadFont("./SuisseIntlLD-Regular.otf");
-  fontBook = loadFont("./SuisseIntlLD-Book.otf");
+  fontBold = loadFont("./craigFonts/SuisseIntlLD-Bold.otf");
+  fontRegular = loadFont("./craigFonts/SuisseIntlLD-Regular.otf");
+  fontBook = loadFont("./craigFonts/SuisseIntlLD-Book.otf");
 }
 function setup() {
   createCanvas(windowWidth, windowHeight).parent("p5");
