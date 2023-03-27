@@ -159,7 +159,8 @@ function showZoomLink() {
     if (shw) {
       setTimeout(() => {
         document.querySelector(".main").innerHTML += zoomButton;
-      }, 1000);
+        document.querySelector(".message").remove();
+      }, 800);
       clearInterval(tempInterval);
     }
   }, 100);

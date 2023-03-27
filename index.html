@@ -43,6 +43,36 @@ https://www.instagram.com/reel/Co7c6LqgtAu/?utm_source=ig_web_copy_link
       top: 0;
       left: 0;
     }
+    .message {
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      /* background: white; */
+      /* border-radius: 100px; */
+      /* padding: 0.8% 2%; */
+      font-family: "suisse", Arial;
+      text-transform: uppercase;
+      font-size: 30px;
+      animation: blink 5000ms ease-in-out infinite;
+    }
+    @keyframes blink {
+      0% {
+        opacity: 0;
+        filter: blur(5px);
+      }
+      25% {
+        opacity: 1;
+        filter: blur(0px);
+      }
+      50% {
+        opacity: 1;
+        filter: blur(0px);
+      }
+      100% {
+        opacity: 0;
+        filter: blur(5px);
+      }
+    }
     a {
       all: unset;
       font-family: "suisse", Arial;
@@ -61,7 +91,9 @@ https://www.instagram.com/reel/Co7c6LqgtAu/?utm_source=ig_web_copy_link
   </style>
   <body>
     <div id="p5"></div>
-    <div class="main"></div>
+    <div class="main">
+      <div class="message">Check back here Tuesday at 7 for zoom link</div>
+    </div>
   </body>
   <script src="libraries/p5.js"></script>
   <script src="libraries/p5.sound.min.js"></script>
